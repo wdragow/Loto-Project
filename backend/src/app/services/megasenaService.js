@@ -1,6 +1,6 @@
 import getRandomNumbers from '../utils/randomize';
 
-export default function megasenaCreateNumbers(number_of_bets, qtd_of_numbers_to_create) {
+export default function megasenaCreate(number_of_bets, qtd_of_numbers_to_create) {
   if (qtd_of_numbers_to_create > 15) {
     return { error: 'Quantidade de números excedida! Deve ser de no mínimo 6 e máximo 15.' }
   } else if (qtd_of_numbers_to_create < 6 ) {
