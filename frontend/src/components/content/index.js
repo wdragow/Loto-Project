@@ -3,6 +3,15 @@ import './content.css';
 
 import { useTypeOfGame } from "../../contexts/gameContext";
 
+import DUPLASENA from '../../assets/images/DUPLASENA.png';
+import LOTOFACIL from '../../assets/images/LOTOFACIL.png';
+import LOTOMANIA from '../../assets/images/LOTOMANIA.png';
+import MEGASENA from '../../assets/images/MEGASENA.png';
+import QUINA from '../../assets/images/QUINA.png';
+import TIMEMANIA from '../../assets/images/TIMEMANIA.png';
+
+
+
 export default function Content() {
 
   const { typeOfGame } = useTypeOfGame();
@@ -10,53 +19,44 @@ export default function Content() {
   function RenderContent() {
     if (typeOfGame === 'megasena'){
       return (
-        <>
-          <header>
-            <p>
-
-            </p>
-          </header>
-        </>
+        <div style={{backgroundColor: 'var(--megasena)'}}>
+          <div>
+            <img src={MEGASENA} alt="Mega-Sena" width={500}/>
+          </div>
+          <div>
+            
+          </div>
+        </div>
       );
     } else if (typeOfGame === 'lotofacil') {
       return (
-        <>
-          <header>
-            <p>Lotofácil</p>
-          </header>
-        </>
+        <div style={{backgroundColor: 'var(--lotofacil)'}}>
+          <img src={LOTOFACIL} alt="Lotofácil" width={500}/>
+        </div>
       );
     } else if (typeOfGame === 'quina') {
       return (
-        <>
-          <header>
-            <p>Quina</p>
-          </header>
-        </>
+        <div style={{backgroundColor: 'var(--quina)'}}>
+          <img src={QUINA} alt="Quina" width={500}/>
+        </div>
       );
     } else if (typeOfGame === 'lotomania') {
       return (
-        <>
-          <header>
-            <p>Lotomania</p>
-          </header>
-        </>
+        <div style={{backgroundColor: 'var(--lotomania)'}}>
+          <img src={LOTOMANIA} alt="Lotomania" width={500}/>
+        </div>
       );
     } else if (typeOfGame === 'duplasena') {
       return (
-        <>
-          <header>
-            <p>Dupla Sena</p>
-          </header>
-        </>
+        <div style={{backgroundColor: 'var(--duplasena)'}}>
+          <img src={DUPLASENA} alt="Dupla Sena" width={500}/>
+        </div>
       );
     } else if (typeOfGame === 'timemania') {
       return (
-        <>
-          <header>
-            <p>Timemania</p>
-          </header>
-        </>
+        <div style={{backgroundColor: 'var(--timemania)'}}>
+          <img src={TIMEMANIA} alt="Timemania" width={500}/>
+        </div>
       );
     }
   }

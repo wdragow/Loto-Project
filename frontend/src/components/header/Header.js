@@ -60,7 +60,7 @@ export default function Header() {
               onMouseOver={() => setBackground({backgroundColor: 'var(--duplasena)'})}
               onMouseLeave={() => setBackground({backgroundColor: 'var(--light)'})}
             >
-              Dupla-Sena
+              Dupla Sena
             </button>
           </li>
           <li>
