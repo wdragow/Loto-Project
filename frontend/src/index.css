@@ -2,10 +2,10 @@
 
 :root {
   --lotomania: #fa9f42ff;
-  --quina: #01295fff;
-  --lotofacil: #c62fc6ff;
-  --loteca: #d10000ff;
-  --megasena: #05b384ff;
+  --quina: #2E3F85;
+  --lotofacil:#964988;
+  --timemania: #5FE019;
+  --megasena: #369A6B;
   --duplasena: #a42d53;
   --light: #e6e6e6ff;
   --dark: #39393aff;
@@ -16,8 +16,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-
 
 body {
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);

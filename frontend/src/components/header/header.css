@@ -1,5 +1,10 @@
-header {
+/* header {
   border: 1px solid red;
+} */
+
+header p {
+  text-align: center;
+  padding-top: 10px;
 
 }
 
@@ -9,7 +14,7 @@ nav {
   border-radius: 15px;
   height: 70px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
@@ -37,26 +42,37 @@ button {
 button.megasena:hover{
   background-color: var(--megasena);
   color: white;
+  cursor: pointer;
 }
 
 button.lotofacil:hover{
   background-color: var(--lotofacil);
   color: white;
+  cursor: pointer;
 }
 button.quina:hover{
   background-color: var(--quina);
   color: white;
+  cursor: pointer;
 }
 button.lotomania:hover{
   background-color: var(--lotomania);
   color: white;
+  cursor: pointer;
 }
 button.duplasena:hover{
   background-color: var(--duplasena);
   color: white;
+  cursor: pointer;
 }
 button.loteca:hover{
   background-color: var(--loteca);
   color: white;
+  cursor: pointer;
+}
+button.timemania:hover{
+  background-color: var(--timemania);
+  color: white;
+  cursor: pointer;
 }
 

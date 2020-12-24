@@ -1,18 +1,23 @@
 import React from 'react';
 import './header.css';
 
-export default function header() {
+import { useTypeOfGame } from "../../contexts/gameContext";
+
+export default function Header() {
+
+  const { setTypeOfGame } = useTypeOfGame();
+
   return (
     <header>
-      <p>Gerador numeros loterias</p>
+      {/* <p>Bem-vindo(a), selecione qual jogo deseja criar abaixo: </p> */}
       <nav>
         <ul>
-          <li><button className='megasena'>megasena</button></li>
-          <li><button className='lotofacil'>lotofacil</button></li>
-          <li><button className='quina'>quina</button></li>
-          <li><button className='lotomania'>lotomania</button></li>
-          <li><button className='duplasena'>duplasena</button></li>
-          <li><button className='loteca'>loteca</button></li>
+          <li><button className='megasena' onClick={() => setTypeOfGame('megasena')}>Mega-Sena</button></li>
+          <li><button className='lotofacil' onClick={() => setTypeOfGame('lotofacil')}>Lotofácil</button></li>
+          <li><button className='quina' onClick={() => setTypeOfGame('quina')}>Quina</button></li>
+          <li><button className='lotomania' onClick={() => setTypeOfGame('lotomania')}>Lotomania</button></li>
+          <li><button className='duplasena' onClick={() => setTypeOfGame('duplasena')}>Dupla-Sena</button></li>
+          <li><button className='timemania' onClick={() => setTypeOfGame('timemania')}>Timemania</button></li>
         </ul>
       </nav>
     </header>

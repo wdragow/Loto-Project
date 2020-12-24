@@ -5,7 +5,7 @@ class LotoController {
   async createNumbers(req, res) {
     const { type, number_of_bets, qtd_of_numbers_to_create } = req.body;
 
-    let loto_return = [], value, min, max;
+    let loto_return = [], min, max;
 
     if (type === 'megasena'){
       min = 6;
@@ -36,7 +36,7 @@ class LotoController {
       min = 6;
       max = 15;
       loto_return = createBets(number_of_bets, qtd_of_numbers_to_create, min, max, 50);
-      loto_return.push({game: 'Dupla Sena'});
+      loto_return.push({game: 'Dupla-Sena'});
     }
 
     loto_return.push({ 
