@@ -1,4 +1,62 @@
 header {
-  background-color: var( --color-gunmetal);
+  border: 1px solid red;
+
+}
+
+nav {
+  background-color: var(--light);
+  margin: 10px;
+  border-radius: 15px;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  justify-items: end;
+}
+
+button {
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  filter: contrast(90%);
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+button.megasena:hover{
+  background-color: var(--megasena);
+  color: white;
+}
+
+button.lotofacil:hover{
+  background-color: var(--lotofacil);
+  color: white;
+}
+button.quina:hover{
+  background-color: var(--quina);
+  color: white;
+}
+button.lotomania:hover{
+  background-color: var(--lotomania);
+  color: white;
+}
+button.duplasena:hover{
+  background-color: var(--duplasena);
+  color: white;
+}
+button.loteca:hover{
+  background-color: var(--loteca);
+  color: white;
 }
 
