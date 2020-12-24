@@ -7,44 +7,59 @@ export default function megasenaCreateNumbers(number_of_bets, qtd_of_numbers_to_
     return { error: 'Quantidade de números muito baixa! Deve ser de no mínimo 6 e máximo 15.' }
   } else {
     let array_of_bets = [];
-    for (let i = 1; i < number_of_bets; i++) {
+    for (let i = 0; i < number_of_bets; i++) {
       array_of_bets.push({
         bet : i,
         numbers : getRandomNumbers(1, 60, qtd_of_numbers_to_create),
       })
     }
-
-    switch (qtd_of_numbers_to_create) {
+    let value;
+    switch (Number(qtd_of_numbers_to_create)) {
       case 6:
-
+        value = 4.50 * number_of_bets;
         break;
 
-      case 6:
-
+      case 7:
+        value = 31.50 * number_of_bets;
         break;
 
-      case 6:
-
+      case 8:
+        value = 126.00 * number_of_bets;
         break;
 
-      case 6:
-
+      case 9:
+        value = 378.00 * number_of_bets;
         break;
 
-      case 6:
-
+      case 10:
+        value = 945.00 * number_of_bets;
         break;
 
-      case 6:
-
+      case 11:
+        value = 2079.00 * number_of_bets;
         break;
 
+      case 12:
+        value = 4158.00 * number_of_bets;
+        break;
 
+      case 13:
+        value = 7722.00 * number_of_bets;
+        break;
 
-    
+      case 14:
+        value = 13513.50 * number_of_bets;
+        break;
+
+      case 15:
+        value = 22522.50 * number_of_bets;
+        break;
+
       default:
         break;
     }
+
+    array_of_bets.push({ value: value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) })
 
     return array_of_bets;
   }
