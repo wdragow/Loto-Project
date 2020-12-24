@@ -4,6 +4,6 @@ import LotoController from './app/controllers/LotoController';
 
 const routes = new Router();
 
-routes.get('/loto', LotoController.listar);
+routes.post('/create', LotoController.createNumbers);
 
 export default routes;
