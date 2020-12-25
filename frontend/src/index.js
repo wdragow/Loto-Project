@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-import { GameProvider } from "../src/contexts/gameContext";
+import { GameProvider } from './contexts/gameContext';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +11,5 @@ ReactDOM.render(
       <App />
     </GameProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
-
-

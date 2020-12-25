@@ -43,7 +43,6 @@ button.megasena:hover{
   color: white;
   cursor: pointer;
 }
-
 button.lotofacil:hover{
   background-color: var(--lotofacil);
   color: white;
@@ -75,3 +74,8 @@ button.timemania:hover{
   cursor: pointer;
 }
 
+button.megasena:focus{
+  border-color: var(--megasena);
+  color: white;
+  cursor: pointer;
+}

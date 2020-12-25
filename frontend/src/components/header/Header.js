@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './header.css';
 
-import { useTypeOfGame } from "../../contexts/gameContext";
+import { useTypeOfGame } from '../../contexts/gameContext';
 
 export default function Header() {
   const { setTypeOfGame } = useTypeOfGame();
 
-  const [background, setBackground] = useState({backgroundColor: 'var(--light)'});
+  const [background, setBackground] = useState({ backgroundColor: 'var(--light)' });
 
   return (
     <header>
@@ -14,61 +14,73 @@ export default function Header() {
       <nav style={background}>
         <ul>
           <li>
-            <button 
-              className='megasena' 
+            <button
+              type='button'
+              className='megasena'
               onClick={() => setTypeOfGame('megasena')}
-              onMouseOver={() => setBackground({backgroundColor: 'var(--megasena)'})}
-              onMouseLeave={() => setBackground({backgroundColor: 'var(--light)'})}
+              onMouseOver={() => setBackground({ backgroundColor: 'var(--megasena)' })}
+              onMouseLeave={() => setBackground({ backgroundColor: 'var(--light)' })}
+              onFocus={() => undefined}
             >
               Mega-Sena
             </button>
           </li>
           <li>
-            <button 
-              className='lotofacil' 
+            <button
+              type='button'
+              className='lotofacil'
               onClick={() => setTypeOfGame('lotofacil')}
-              onMouseOver={() => setBackground({backgroundColor: 'var(--lotofacil)'})}
-              onMouseLeave={() => setBackground({backgroundColor: 'var(--light)'})}
+              onMouseOver={() => setBackground({ backgroundColor: 'var(--lotofacil)' })}
+              onMouseLeave={() => setBackground({ backgroundColor: 'var(--light)' })}
+              onFocus={() => undefined}
             >
               Lotofácil
             </button>
           </li>
           <li>
-            <button 
-              className='quina' 
+            <button
+              type='button'
+              className='quina'
               onClick={() => setTypeOfGame('quina')}
-              onMouseOver={() => setBackground({backgroundColor: 'var(--quina)'})}
-              onMouseLeave={() => setBackground({backgroundColor: 'var(--light)'})}
+              onMouseOver={() => setBackground({ backgroundColor: 'var(--quina)' })}
+              onMouseLeave={() => setBackground({ backgroundColor: 'var(--light)' })}
+              onFocus={() => undefined}
             >
               Quina
             </button>
           </li>
           <li>
-            <button 
-              className='lotomania' 
+            <button
+              type='button'
+              className='lotomania'
               onClick={() => setTypeOfGame('lotomania')}
-              onMouseOver={() => setBackground({backgroundColor: 'var(--lotomania)'})}
-              onMouseLeave={() => setBackground({backgroundColor: 'var(--light)'})}
+              onMouseOver={() => setBackground({ backgroundColor: 'var(--lotomania)' })}
+              onMouseLeave={() => setBackground({ backgroundColor: 'var(--light)' })}
+              onFocus={() => undefined}
             >
               Lotomania
             </button>
           </li>
           <li>
-            <button 
-              className='duplasena' 
+            <button
+              type='button'
+              className='duplasena'
               onClick={() => setTypeOfGame('duplasena')}
-              onMouseOver={() => setBackground({backgroundColor: 'var(--duplasena)'})}
-              onMouseLeave={() => setBackground({backgroundColor: 'var(--light)'})}
+              onMouseOver={() => setBackground({ backgroundColor: 'var(--duplasena)' })}
+              onMouseLeave={() => setBackground({ backgroundColor: 'var(--light)' })}
+              onFocus={() => undefined}
             >
               Dupla Sena
             </button>
           </li>
           <li>
-            <button 
-              className='timemania' 
+            <button
+              type='button'
+              className='timemania'
               onClick={() => setTypeOfGame('timemania')}
-              onMouseOver={() => setBackground({backgroundColor: 'var(--timemania)'})}
-              onMouseLeave={() => setBackground({backgroundColor: 'var(--light)'})}
+              onMouseOver={() => setBackground({ backgroundColor: 'var(--timemania)' })}
+              onMouseLeave={() => setBackground({ backgroundColor: 'var(--light)' })}
+              onFocus={() => undefined}
             >
               Timemania
             </button>

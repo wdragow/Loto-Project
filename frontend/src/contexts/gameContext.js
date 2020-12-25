@@ -9,7 +9,7 @@ export const GameProvider = ({ children }) => {
     <GameContext.Provider
       value={{
         typeOfGame,
-        setTypeOfGame
+        setTypeOfGame,
       }}
     >
       {children}
