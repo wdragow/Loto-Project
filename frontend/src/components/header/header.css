@@ -15,6 +15,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 0.5em #000;
 }
 
 nav ul {

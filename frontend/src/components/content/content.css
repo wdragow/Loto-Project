@@ -5,7 +5,6 @@
 header p {
   text-align: center;
   padding-top: 10px;
-
 }
 
 nav {
@@ -76,3 +75,11 @@ button.timemania:hover{
   cursor: pointer;
 }
 
+.content-container {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 0.5em #000;
+  flex-direction: row;
+  justify-content: space-around;
+}

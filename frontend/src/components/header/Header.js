@@ -4,7 +4,7 @@ import './header.css';
 import { useTypeOfGame } from '../../contexts/gameContext';
 
 export default function Header() {
-  const { setTypeOfGame } = useTypeOfGame();
+  const { setTypeOfGame, setBackgroundColor } = useTypeOfGame();
 
   const [background, setBackground] = useState({ backgroundColor: 'var(--light)' });
 
@@ -17,7 +17,10 @@ export default function Header() {
             <button
               type='button'
               className='megasena'
-              onClick={() => setTypeOfGame('megasena')}
+              onClick={() => {
+                setTypeOfGame('megasena');
+                setBackgroundColor({ backgroundColor: 'var(--megasena)' });
+              }}
               onMouseOver={() => setBackground({ backgroundColor: 'var(--megasena)' })}
               onMouseLeave={() => setBackground({ backgroundColor: 'var(--light)' })}
               onFocus={() => undefined}
@@ -29,7 +32,10 @@ export default function Header() {
             <button
               type='button'
               className='lotofacil'
-              onClick={() => setTypeOfGame('lotofacil')}
+              onClick={() => {
+                setTypeOfGame('lotofacil');
+                setBackgroundColor({ backgroundColor: 'var(--lotofacil)' });
+              }}
               onMouseOver={() => setBackground({ backgroundColor: 'var(--lotofacil)' })}
               onMouseLeave={() => setBackground({ backgroundColor: 'var(--light)' })}
               onFocus={() => undefined}
@@ -41,7 +47,10 @@ export default function Header() {
             <button
               type='button'
               className='quina'
-              onClick={() => setTypeOfGame('quina')}
+              onClick={() => {
+                setTypeOfGame('quina');
+                setBackgroundColor({ backgroundColor: 'var(--quina)' });
+              }}
               onMouseOver={() => setBackground({ backgroundColor: 'var(--quina)' })}
               onMouseLeave={() => setBackground({ backgroundColor: 'var(--light)' })}
               onFocus={() => undefined}
@@ -53,7 +62,10 @@ export default function Header() {
             <button
               type='button'
               className='lotomania'
-              onClick={() => setTypeOfGame('lotomania')}
+              onClick={() => {
+                setTypeOfGame('lotomania');
+                setBackgroundColor({ backgroundColor: 'var(--lotomania)' });
+              }}
               onMouseOver={() => setBackground({ backgroundColor: 'var(--lotomania)' })}
               onMouseLeave={() => setBackground({ backgroundColor: 'var(--light)' })}
               onFocus={() => undefined}
@@ -65,7 +77,10 @@ export default function Header() {
             <button
               type='button'
               className='duplasena'
-              onClick={() => setTypeOfGame('duplasena')}
+              onClick={() => {
+                setTypeOfGame('duplasena');
+                setBackgroundColor({ backgroundColor: 'var(--duplasena)' });
+              }}
               onMouseOver={() => setBackground({ backgroundColor: 'var(--duplasena)' })}
               onMouseLeave={() => setBackground({ backgroundColor: 'var(--light)' })}
               onFocus={() => undefined}
@@ -77,7 +92,10 @@ export default function Header() {
             <button
               type='button'
               className='timemania'
-              onClick={() => setTypeOfGame('timemania')}
+              onClick={() => {
+                setTypeOfGame('timemania');
+                setBackgroundColor({ backgroundColor: 'var(--timemania)' });
+              }}
               onMouseOver={() => setBackground({ backgroundColor: 'var(--timemania)' })}
               onMouseLeave={() => setBackground({ backgroundColor: 'var(--light)' })}
               onFocus={() => undefined}
