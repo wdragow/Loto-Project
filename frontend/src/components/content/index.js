@@ -1,58 +1,27 @@
 import React from 'react';
-import Select from 'react-select';
 import './content.css';
 
 import { useTypeOfGame } from '../../contexts/gameContext';
 
-import DUPLASENA from '../../assets/images/DUPLASENA.png';
-import LOTOFACIL from '../../assets/images/LOTOFACIL.png';
-import LOTOMANIA from '../../assets/images/LOTOMANIA.png';
-import MEGASENA from '../../assets/images/MEGASENA.png';
-import QUINA from '../../assets/images/QUINA.png';
-import TIMEMANIA from '../../assets/images/TIMEMANIA.png';
-
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' },
-];
+import DropdownQtdNumber from '../dropdown';
+import LogoImgs from '../logoImg';
 
 export default function Content() {
-  const { typeOfGame, backgroundColor } = useTypeOfGame();
-
-  function RenderContent() {
-    if (typeOfGame === 'megasena') {
-      return (
-        <img src={MEGASENA} alt='Mega-Sena' width={500} />
-      );
-    } if (typeOfGame === 'lotofacil') {
-      return (
-        <img src={LOTOFACIL} alt='Lotofácil' width={500} />
-      );
-    } if (typeOfGame === 'quina') {
-      return (
-        <img src={QUINA} alt='Quina' width={500} />
-      );
-    } if (typeOfGame === 'lotomania') {
-      return (
-        <img src={LOTOMANIA} alt='Lotomania' width={500} />
-      );
-    } if (typeOfGame === 'duplasena') {
-      return (
-        <img src={DUPLASENA} alt='Dupla Sena' width={500} />
-      );
-    } if (typeOfGame === 'timemania') {
-      return (
-        <img src={TIMEMANIA} alt='Timemania' width={500} />
-      );
-    }
-  }
+  const { backgroundColor } = useTypeOfGame();
 
   return (
     <div style={backgroundColor} className='content-container'>
-      <div style={backgroundColor} className='content-container'>
-        <RenderContent />
-        <Select options={options} />
+      <div style={backgroundColor} className='content-item'>
+        <LogoImgs />
+        <div style={backgroundColor} className='content-item'>
+          <p style={{ color: 'white' }}>Quantidade de números</p>
+          <DropdownQtdNumber />
+          <p style={{ color: 'white' }}>Quantidade de jogos</p>
+          <input type='number' min={1} defaultValue='1' />
+          <button type='button'>
+            Gerar
+          </button>
+        </div>
       </div>
     </div>
   );

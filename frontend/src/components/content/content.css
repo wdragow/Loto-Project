@@ -80,6 +80,4 @@ button.timemania:hover{
   margin: 10px;
   border-radius: 15px;
   box-shadow: 0 0 0.5em #000;
-  flex-direction: row;
-  justify-content: space-around;
 }
